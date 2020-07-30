@@ -1,0 +1,289 @@
+* { box-sizing: border-box; }
+
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+
+body {
+	background-image: url('image1.jpg');
+	background-position: center center;
+	background-size: cover;
+	font-size: 16px;
+	margin: 0;
+    animation: slide 20s infinite;
+}
+
+a {
+	color: #939398;
+}
+
+p {
+	margin: 0;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.mb-1 {
+	margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+	margin-bottom: 2rem !important;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+/* Check Icon */
+span.check-icon {
+	border: solid #48a64c;
+	border-top: 0;
+	border-left: 0;
+	display: none;
+	height: 15px;
+	width: 7.5px;
+	transform: rotate(45deg);
+}
+
+/*
+
+                    span.check-icon {
+                        position: absolute;
+                        bottom: 11px;
+                        right: 17px;
+                    }
+
+                    input.valid ~ span.check-icon {
+                        display: inline-block;
+                    }
+                    */
+
+
+
+span.bar {
+	background-color: #767676;
+	display: block;
+	height: 2px;
+	margin-bottom: 2px;
+	width: 15px;
+}
+
+span.bar:last-child {
+	margin-bottom: 0;
+}
+
+
+.wrapper {
+	display: flex;
+	height: 100%;
+	padding: 45px 25px;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1200px;
+
+}
+
+/* Quote Wrapper */
+.quote-wrapper {
+	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80') no-repeat center center;
+	background-size: cover;
+	border-radius: 10px 0 0 10px;
+	flex-basis: 50%;
+	height: 100%;
+	
+}
+
+.quote-wrapper blockquote {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+    transition:6s;
+}
+
+.quote-wrapper blockquote p {
+	color: #fff;
+	font-size: 1.9rem;
+	font-weight: 400;
+	text-align: center;
+    transition: 2s;
+}
+
+.quote-wrapper blockquote p.author {
+	font-size: 1rem;
+	font-weight: 100;
+	margin-top: 7px;
+	text-align: right;
+	width: 90%;
+}
+
+h1.form-title {
+	color: white;
+	font-size: 1.9rem;
+	margin-bottom: 50px;
+	transition: 3s;
+}
+
+/* Form */
+
+.form-wrapper {
+	background:linear-gradient(rgba(113, 21, 146, 0.36), rgba(93, 21, 17, 0.52), rgba(7, 40, 84, 0.45));
+	border-radius: 0 10px 10px 0;
+	display: flex;
+	flex-direction: column;
+	flex-basis: 50%;
+	height: 100%;
+	justify-content: center;
+	text-align: center;
+	transition:1s;
+}
+
+.form-wrapper form .form-group {
+	margin: 0 auto;
+	margin-bottom: 45px;
+	position: relative;
+	width: 300px;
+}
+
+.form-group input {
+	background-color: #efeff4;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	padding: 7px 0 5px 7px;
+}
+
+.form-group input:focus,
+.form-group input:active {
+	outline: none;
+}
+
+.form-group label.terms {
+	color: #939398;
+	font-size: 0.8rem;
+}
+
+.form-group input[type="submit"] {
+	background-color: #007AFF;
+	border: none;
+	color: #fff;
+	transition: all 0.2s;
+}
+
+.form-group input[type="submit"]:hover {
+	background-color: #0047ab;
+	cursor: pointer;
+}
+
+.form-group label:not(.terms) {
+	color: #939398;
+	font-size: 0.8rem;
+	position: absolute;
+	top: -25px;
+}
+
+
+.form-wrapper small {
+	color: #939398;
+	margin-top: 4px;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 687px) {
+	.wrapper {
+		max-width: 500px;
+	}
+
+	/* hide quote-wrapper */
+	.quote-wrapper {
+		display: none;
+	}
+
+	/* Form Wrapper */
+	.form-wrapper {
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 10px;
+		flex-basis: 500px;
+		margin: 0 auto;
+	}
+
+	.form-wrapper h1.form-title {
+		margin-top: 0;
+	}
+
+	.form-group input {
+		background-color: #fff;
+	}
+}
+
+
+@media screen and (max-width: 372px) {
+	a.menu-toggle {
+		right: 25px;
+	}
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.form-wrapper {
+		border-radius: 0;
+		flex-basis: 1;
+	}
+}
+
+
+/*
+@media screen and (max-height: 500px) {
+	a.menu-toggle {
+		top: 15px;
+	}
+*/
+
+/*
+	.wrapper {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+*/
+
+/*
+	h1.form-title {
+		margin-bottom: 30px;
+		margin-top: 7px;
+	}
+*/
+ @keyframes slide {
+	
+	0%{
+		background-image: url('image1.jpg');
+	}
+	20%{
+		background-image: url('image2.jpg');
+	}
+    40%{
+		background-image: url('image3.jpg');
+	}
+    60%{
+		background-image: url('image4.jpg');
+	}
+    85%{
+		background-image: url('image5.jpg');
+        }
+}
